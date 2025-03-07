@@ -5,7 +5,7 @@
     - name: copy the file
       ansible.builtin.git:
         repo: https://github.com/BalaAnkiReddy-jinkala/LearnAnsible.git
-        dest: /etc/dest/king
+        dest: /opt/repo
       register: out
     - name: check the url is reached
       ansible.builtin.debug:

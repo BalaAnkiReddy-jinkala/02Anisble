@@ -1,0 +1,6 @@
+- name: Create a command
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: command
+      ansible.builtin.command: "free -m"

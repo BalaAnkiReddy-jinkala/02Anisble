@@ -6,5 +6,6 @@
     - name: User creation
       ansible.builtin.user:
         name: anki
-        passwd: massraabacha
+        password: massraabacha
         uid: 12342
+...

@@ -3,6 +3,7 @@
   connection: local
   tasks:
     - name: copy the file
-      ansible.builtin.copy:
-        content: "poooraa yadhava"
-        dest: /etc/boss
+      ansible.builtin.dnf:
+        name: tomcat10
+        state: installed
+        enabled: yes

@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: shell command
-      ansible.builtin.shell: "free -m"
+      ansible.builtin.shell: "date"
       register: out
     - name: display the output
       ansible.builtin.debug:

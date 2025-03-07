@@ -6,4 +6,4 @@
       ansible.builtin.dnf:
         name: tomcat10
         state: present
-        enabled: yes
+

@@ -1,14 +1,24 @@
-- name: include
+- name: Include and Execute Playbooks
   hosts: localhost
   connection: local
   tasks:
-    - name: module
-      ansible.builtin.include:
-        - git pull ;ansible-playbook -i inv 01sample.yml
-        - git pull ;ansible-playbook -i inv 02sample.yml
-        - git pull ;ansible-playbook -i inv 03sample.yml
-        - git pull ;ansible-playbook -i inv 04sample.yml
-      register: out
-    - name: display
+    - name: Pull latest code from Git
+      ansible.builtin.shell: git pull
+      register: git_output
+
+    - name: Display Git output
       ansible.builtin.debug:
-        var: out
+        var: git_output.stdout
+
+    - name: Run playbooks sequentially
+      ansible.builtin.command: ansible-playbook -i inv {{ item }}
+      loop:
+        - 01sample.yml
+        - 02sample.yml
+        - 03sample.yml
+        - 04sample.yml
+      register: playbook_output
+
+    - name: Display playbook execution results
+      ansible.builtin.debug:
+        var: playbook_output

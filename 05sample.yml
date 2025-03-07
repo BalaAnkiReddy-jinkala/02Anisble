@@ -2,9 +2,14 @@
   hosts: localhost
   connection: local
   tasks:
-    -name: download
-    ansible.builtin.include:
-      - git pull; ansible-playbook -i inv 01sample.yml
-      - git pull; ansible-playbook -i inv 02sample.yml
-      - git pull; ansible-playbook -i inv 03sample.yml
-      - git pull; ansible-playbook -i inv 04sample.yml
+    - name: download
+      ansible.builtin.include:
+        - git pull; ansible-playbook -i inv 01sample.yml
+        - git pull; ansible-playbook -i inv 02sample.yml
+        - git pull; ansible-playbook -i inv 03sample.yml
+        - git pull; ansible-playbook -i inv 04sample.yml
+      register: hello
+    - name: bebug
+      ansible.builtin.debug:
+        var: hello
+

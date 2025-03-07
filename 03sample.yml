@@ -6,6 +6,7 @@
       ansible.builtin.dnf:
         name: apache2
         state: present
+        update_cache: yes
     - name: change the content
       ansible.builtin.copy:
         content: "happy to all the service"

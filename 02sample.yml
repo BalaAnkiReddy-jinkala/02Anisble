@@ -6,6 +6,10 @@
     - name: User creation
       ansible.builtin.user:
         name: anki
-        password: massraabacha
+        password: masterclass
         uid: 12342
+        register: out
+    - name: detailed info
+      ansible.builtin.debug:
+        msg: "{{out}}"
 ...

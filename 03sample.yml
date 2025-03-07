@@ -1,5 +1,5 @@
 - name: Change the file
-  host: localhost
+  hosts: localhost
   connection: local
   tasks:
     - name: copy the file

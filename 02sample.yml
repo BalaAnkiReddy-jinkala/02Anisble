@@ -1,0 +1,10 @@
+---
+- name: create the user
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: User creation
+      ansible.builtin.user:
+        name: anki
+        passwd: massraabacha
+        uid: 12342

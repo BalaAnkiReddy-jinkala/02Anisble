@@ -4,7 +4,7 @@
   tasks:
     - name: copy the file
       ansible.builtin.git:
-        repo: https://github.com/BalaAnkiReddy-jinkala/02Anisble.git
+        repo: https://github.com/BalaAnkiReddy-jinkala/LearnAnsible.git
         dest: /etc/dest
       register: out
     - name: check the url is reached

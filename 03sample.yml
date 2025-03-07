@@ -4,6 +4,6 @@
   tasks:
     - name: copy the file
       ansible.builtin.dnf:
-        name: tomcat10
+        name: tomcat
         state: present
 

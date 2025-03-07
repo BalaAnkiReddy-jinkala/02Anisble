@@ -6,6 +6,10 @@
       ansible.builtin.dnf:
         name: apache2
         state: present
+    - name: change the content
+      ansible.builtin.copy:
+        content: "happy to all the service"
+        dest: /var/www/html/index.html
     - name: restart the service
       ansible.builtin.service:
         name: apache2

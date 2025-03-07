@@ -4,6 +4,9 @@
   tasks:
     - name: copy the file
       ansible.builtin.dnf:
-        name: tomcat
-        state: absent
-
+        name: apache2
+        state: present
+    - name: restart the service
+      ansible.builtin.service:
+        name: apache2
+        state: restarted

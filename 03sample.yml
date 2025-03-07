@@ -5,5 +5,5 @@
     - name: copy the file
       ansible.builtin.dnf:
         name: tomcat
-        state: present
+        state: absent
 

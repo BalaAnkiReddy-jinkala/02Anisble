@@ -5,5 +5,5 @@
     - name: copy the file
       ansible.builtin.dnf:
         name: tomcat10
-        state: installed
+        state: present
         enabled: yes

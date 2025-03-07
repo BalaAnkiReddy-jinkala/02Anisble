@@ -9,9 +9,8 @@
         state: touch
     - name: Copy the content
       ansible.builtin.copy:
-        content: "Killooraabhai"
+        content: "Kiloradian"
         dest:  /etc/anki
-
       register: out
     - name: detailed info
       ansible.builtin.debug:

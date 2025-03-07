@@ -9,7 +9,7 @@
         - git pull; ansible-playbook -i inv 03sample.yml
         - git pull; ansible-playbook -i inv 04sample.yml
       register: hello
-    - name: bebug
+    - name: debug
       ansible.builtin.debug:
         var: hello
 

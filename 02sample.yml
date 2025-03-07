@@ -7,6 +7,10 @@
       ansible.builtin.file:
         name: /etc/anki
         state: touch
+    - name: Copy the content
+      ansible.builtin.copy:
+        content: "Killooraabhai"
+        dest:  /etc/anki
 
       register: out
     - name: detailed info

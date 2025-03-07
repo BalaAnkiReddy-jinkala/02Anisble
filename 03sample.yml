@@ -4,7 +4,7 @@
   tasks:
     - name: copy the file
       ansible.builtin.uri:
-        url: www.google.com
+        url: http://www.google.com
         dest: /etc/dest
       register: out
     - name: check the url is reached

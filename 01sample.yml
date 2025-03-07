@@ -2,5 +2,9 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: command
-      ansible.builtin.command: "free -m"
+    - name: shell command
+      ansible.builtin.shell: "free -m"
+      register: out
+    - name: display the output
+      ansible.builtin.debug:
+        msg: "{{out}}"

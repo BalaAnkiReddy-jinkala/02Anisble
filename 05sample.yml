@@ -12,7 +12,7 @@
 
     - name: Run playbooks sequentially
       ansible.builtin.command: ansible-playbook -i inv {{ item }}
-      loop:
+      with_items:
         - 01sample.yml
         - 02sample.yml
         - 03sample.yml

@@ -4,5 +4,5 @@
   tasks:
     - name: copy the file
       ansible.builtin.copy:
-        src: /etc/anki
+        content: "poooraa yadhava"
         dest: /etc/boss

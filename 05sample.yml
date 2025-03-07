@@ -11,7 +11,7 @@
         var: git_output.stdout
 
     - name: Run playbooks sequentially
-      ansible.builtin.command: ansible-playbook -i inv {{ item }}
+      ansible.builtin.include: ansible-playbook -i inv {{ item }}
       with_items:
         - 01sample.yml
         - 02sample.yml

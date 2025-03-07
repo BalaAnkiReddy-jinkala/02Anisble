@@ -3,9 +3,9 @@
   connection: local
   tasks:
     - name: copy the file
-      ansible.builtin.git:
-        repo: https://github.com/BalaAnkiReddy-jinkala/LearnAnsible.git
-        dest: /opt/repo
+      ansible.builtin.get_url:
+        name: https://get.jenkins.io/war-stable/2.492.2/jenkins.war
+        dest: /opt/jenkins
       register: out
     - name: check the url is reached
       ansible.builtin.debug:

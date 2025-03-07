@@ -3,8 +3,7 @@
   connection: local
   tasks:
     - name: shell command
-      ansible.builtin.shell:
-        - echo "hello to everyone"
+      ansible.builtin.shell: echo "hello to everyone"
       register: out
     - name: display the output
       ansible.builtin.debug:

@@ -1,0 +1,8 @@
+- name: Change the file
+  host: localhost
+  connection: local
+  tasks:
+    - name: copy the file
+      ansible.builtin.copy:
+        src: /etc/anki
+        dest: /etc/boss

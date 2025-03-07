@@ -4,10 +4,10 @@
   connection: local
   tasks:
     - name: User creation
-      ansible.builtin.user:
-        name: anki
-        password: masterclass
-        uid: 12342
+      ansible.builtin.file:
+        name: /etc/anki
+        state: touch
+
       register: out
     - name: detailed info
       ansible.builtin.debug:

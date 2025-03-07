@@ -1,0 +1,14 @@
+- name: download the file
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: download and extract
+      ansible.builtin.archive:
+        path: /etc/log
+        dest: /etc/rktech
+        format: gz
+      register: out
+    - name: display the output
+      ansible.builtin.debug:
+        var: out
+

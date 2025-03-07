@@ -3,15 +3,10 @@
   connection: local
   tasks:
     - name: copy the file
-      ansible.builtin.dnf:
-        name: apache2
-        state: present
-        update_cache: yes
-    - name: change the content
-      ansible.builtin.copy:
-        content: "happy to all the service"
-        dest: /var/www/html/index.html
-    - name: restart the service
-      ansible.builtin.service:
-        name: apache2
-        state: restarted
+      ansible.builtin.uri:
+        url: www.google.com
+        dest: /etc/dest
+      register: out
+    - name: check the url is reached
+      ansible.builtin.debug:
+        var: out

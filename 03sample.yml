@@ -3,8 +3,8 @@
   connection: local
   tasks:
     - name: copy the file
-      ansible.builtin.uri:
-        url: http://www.google.com
+      ansible.builtin.git:
+        repo: https://github.com/BalaAnkiReddy-jinkala/02Anisble.git
         dest: /etc/dest
       register: out
     - name: check the url is reached

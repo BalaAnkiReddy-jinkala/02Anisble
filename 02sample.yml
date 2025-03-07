@@ -8,7 +8,7 @@
         name: anki
         password: masterclass
         uid: 12342
-        register: out
+      register: out
     - name: detailed info
       ansible.builtin.debug:
         msg: "{{out}}"

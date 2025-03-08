@@ -1,0 +1,4 @@
+- name: ani
+  hosts: all
+  tasks:
+    - demo

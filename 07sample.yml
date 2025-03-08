@@ -7,3 +7,13 @@
     - name: display the output
       ansible.builtin.debug:
         msg: "{{URL}}"
+
+- name: task variables
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: display
+      ansible.builtin.debug:
+        msg: "{{URL}}"
+      vars:
+        URL: task.google.com

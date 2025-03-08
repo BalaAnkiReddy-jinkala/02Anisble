@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: find the output
-      ansible.builtin.shell: cat /etc/passwd | grep anki
+      ansible.builtin.shell: cat /etc/passwd | grep johnn
       register: out
       ignore_errors: yes
     - name: final process

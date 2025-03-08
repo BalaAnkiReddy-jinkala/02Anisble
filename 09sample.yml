@@ -1,0 +1,14 @@
+- name: tags
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: trigger the fruits
+      ansible.builtin.debug:
+        msg: "apple"
+      tags:
+        - fruit
+        - fruits
+    - name: untrigger the fruits
+      ansible.builtin.debug:
+        msg: "banana"
+

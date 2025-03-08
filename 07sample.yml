@@ -1,4 +1,9 @@
-- name: ani
-  hosts: all
+- name: play variables
+  hosts: localhost
+  connection: local
+  vars:
+    URL: play.google.com
   tasks:
-    - demo
+    - name: display the output
+      ansible.builtin.debug:
+        msg: "{{URL}}"

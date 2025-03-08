@@ -22,6 +22,6 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: output
+    - name: print fact
       ansible.builtin.debug:
-        msg: "{{ansible_distraction}}"
+        msg: "{{ansible_distribution}}"

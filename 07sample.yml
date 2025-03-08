@@ -17,3 +17,11 @@
         msg: "{{URL}}"
       vars:
         URL: task.google.com
+
+- name: Print fact
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: output
+      ansible.builtin.debug:
+        msg: "{{ansible_distraction}}"

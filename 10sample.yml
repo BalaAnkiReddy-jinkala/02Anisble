@@ -3,10 +3,10 @@
   connection: local
   tasks:
     - name: find the output
-      ansible.builtin.shell: cat /etc/passwd | grep johnn
+      ansible.builtin.shell: cat /etc/passwd | grep john
       register: out
       ignore_errors: yes
     - name: final process
       ansible.builtin.debug:
-        msg: this anki user is not there our system
+        msg: this john user is not there our system
       when : out.stdout == ""

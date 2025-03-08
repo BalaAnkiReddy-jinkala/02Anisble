@@ -1,0 +1,8 @@
+- name: condition demo
+  hosts: all
+  connection: local
+  tasks:
+    - name: it is higher or low
+      when: x|int >10
+      ansible.builtin.debug:
+        msg: given number is grater to 10

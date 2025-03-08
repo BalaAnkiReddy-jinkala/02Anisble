@@ -5,4 +5,4 @@
     - name: it is higher or low
       when: x|int >10
       ansible.builtin.debug:
-        msg: given number is grater to 10
+        msg: "given number is grater to 10"

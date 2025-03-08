@@ -8,5 +8,5 @@
       ignore_errors: yes
     - name: final process
       ansible.builtin.debug:
-        msg: "this anki user is not there our system"
+        msg: this anki user is not there our system
       when : out.stdout == ""

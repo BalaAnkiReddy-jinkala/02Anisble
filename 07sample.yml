@@ -25,3 +25,14 @@
     - name: print fact
       ansible.builtin.debug:
         msg: "{{ansible_distribution}}"
+
+- name: Print the date and time
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: display the opt-out
+      ansible.builtin.shell: uptime
+      register: anki
+    - name: final format
+      ansible.builtin.debug:
+        var: anki

@@ -4,9 +4,9 @@
   tasks:
     - name: find the output
       ansible.builtin.shell: cat /etc/passwd | grep anki
-      register: hello
+      register: out
       ignore_errors: yes
     - name: final process
       ansible.builtin.debug:
         msg: "this anki user is not there our system"
-      when : hello.stdout == ""
+      when : out.stdout == ""

@@ -2,7 +2,11 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: it is higher or low
+    - name: it is higher then to 10
       when: x|int >10
       ansible.builtin.debug:
         msg: "given number is grater to 10"
+    - name: it is lower then to 10
+      when: x|int < 10
+      ansible.builtin.debug:
+        msg: "given value is lesser then 10"

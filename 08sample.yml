@@ -1,5 +1,5 @@
 - name: condition demo
-  hosts: all
+  hosts: localhost
   connection: local
   tasks:
     - name: it is higher or low

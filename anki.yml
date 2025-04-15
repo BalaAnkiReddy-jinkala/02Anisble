@@ -1,0 +1,9 @@
+- name: This is used for the debug
+  hosts: all
+  tasks:
+    - name: This is used to more number allowed
+      ansible.builtin.shell: data
+      register: a
+    - name: This is used for debug the issue
+      ansible.builtin.debug:
+      var: a
